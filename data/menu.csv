@@ -1,0 +1,30 @@
+dish_id,name_of_dish,category,price,updated_at,is_active,recipe_id
+1,loaded nachos,sides,28900,4/1/2025,yes,11
+2,halloumi fries,sides,14900,4/1/2025,yes,12
+3,nachos,sides,14900,4/1/2025,yes,13
+4,yuquitas,sides,14900,4/1/2025,yes,14
+5,papas volcan,sides,15900,4/1/2025,yes,15
+6,loaded fries,sides,16900,4/1/2025,yes,16
+7,fries,sides,9900,4/1/2025,yes,17
+8,alas x 5,wings ,18900,4/1/2025,yes,18
+9,alas x 10,wings ,34900,4/1/2025,yes,19
+10,alas x 15,wings ,53900,4/1/2025,yes,20
+11,chunks x 5,tenders,19900,4/1/2025,yes,21
+12,chunks x 10,tenders,34900,4/1/2025,yes,22
+13,hamburguesa sencilla,burgers,26900,4/1/2025,yes,23
+14,hamburguesa tocineta,burgers,26900,4/1/2025,yes,24
+15,hamburguesa chorizo,burgers,26900,4/1/2025,yes,25
+16,hamburguesa pollo buffalo,burgers,26900,4/1/2025,yes,26
+17,hamburguesa pollo mango sriracha,burgers,26900,4/1/2025,yes,27
+18,hamburguesa pollo bbq,burgers,26900,4/1/2025,yes,28
+19,hamburguesa pollo ko,burgers,26900,4/1/2025,yes,29
+20,hamburguesa halloumi,burgers,25900,4/1/2025,yes,30
+21,sandwich de pollo,sandwiches,25900,4/1/2025,yes,31
+22,sandwich de cerdo,sandwiches,25900,4/1/2025,yes,32
+23,sandwich halloumi,sandwiches,22900,4/1/2025,yes,33
+24,schnitzel de pollo,schnitzel,21900,4/1/2025,yes,34
+25,schnitzel de cerdo,schnitzel,22900,4/1/2025,yes,35
+26,schnitzel de carne,schnitzel,24900,4/1/2025,yes,36
+27,asada pollo,asadas,23900,4/1/2025,yes,37
+28,asada cerdo,asadas,23900,4/1/2025,yes,38
+29,asada carne,asadas,23900,4/1/2025,yes,39

@@ -1,0 +1,40 @@
+id,name,is_subrecipe, error_margin , updated_at 
+1,ensalada de la casa,yes,0.003,4/1/2025
+2,guacamole,yes,0.003,4/1/2025
+3,huevo mix,yes,0.003,4/1/2025
+4,pasta de ajo,yes,0.003,4/1/2025
+5,pico de gallo,yes,0.003,4/1/2025
+6,vinagreta,yes,0.003,4/1/2025
+7,ajo parmesano,yes,0.003,4/1/2025
+8,mango madness,yes,0.003,4/1/2025
+9,mapple spice,yes,0.003,4/1/2025
+10,salsa coreana,yes,0.003,4/1/2025
+11,loaded nachos,no,0.003,4/1/2025
+12,halloumi fries,no,0.003,4/1/2025
+13,nachos,no,0.003,4/1/2025
+14,yuquitas,no,0.003,4/1/2025
+15,papas volcan,no,0.003,4/1/2025
+16,loaded fries,no,0.003,4/1/2025
+17,fries,no,0.003,4/1/2025
+18,alas x 5,no,0.003,4/1/2025
+19,alas x 10,no,0.003,4/1/2025
+20,alas x 15,no,0.003,4/1/2025
+21,chunks x 5,no,0.003,4/1/2025
+22,chunks x 10,no,0.003,4/1/2025
+23,hamburguesa sencilla,no,0.003,4/1/2025
+24,hamburguesa tocineta,no,0.003,4/1/2025
+25,hamburguesa chorizo,no,0.003,4/1/2025
+26,hamburguesa pollo buffalo,no,0.003,4/1/2025
+27,hamburguesa pollo mango sriracha,no,0.003,4/1/2025
+28,hamburguesa pollo bbq,no,0.003,4/1/2025
+29,hamburguesa pollo ko,no,0.003,4/1/2025
+30,hamburguesa halloumi,no,0.003,4/1/2025
+31,sandwich de pollo,no,0.003,4/1/2025
+32,sandwich de cerdo,no,0.003,4/1/2025
+33,sandwich halloumi,no,0.003,4/1/2025
+34,schnitzel de pollo,no,0.003,4/1/2025
+35,schnitzel de cerdo,no,0.003,4/1/2025
+36,schnitzel de carne,no,0.003,4/1/2025
+37,asada pollo,no,0.003,4/1/2025
+38,asada cerdo,no,0.003,4/1/2025
+39,asada carne,no,0.003,4/1/2025
