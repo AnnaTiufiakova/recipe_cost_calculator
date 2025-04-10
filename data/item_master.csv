@@ -1,15 +1,15 @@
-item_id,name,is_subrecipe,unit, price_per_unit   , yield_pct ,updated_at
+item_id,name,is_subrecipe,unit,price_per_unit,yield_pct,updated_at
 1,aceite ,no,ml,9,100,4/1/2025
 2,adobo ,yes,gramo,8.62,100,4/1/2025
 3,agua ,no,ml,0,100,4/1/2025
 4,aguacate papelillo,no,gramo,14,75,4/1/2025
 5,ajo ,no,gramo,20,95,4/1/2025
-6,ajo parmesano (salsa),yes,porcion,1772.08,100,4/1/2025
+6,ajo parmesano (salsa),yes,gramo,21.62,100,4/1/2025
 7,alas,no,gramo,8,100,4/1/2025
-8,alas x 1,yes,porcion,5303.44,100,4/1/2025
+8,alas x 1,yes,unidad,5303.44,100,4/1/2025
 9,azucar ,no,gramo,5,100,4/1/2025
 10,bbq,no,gramo,21,100,4/1/2025
-11,beef patty ,yes,porcion,2293.76,100,4/1/2025
+11,beef patty ,yes,gramo,16.38,100,4/1/2025
 12,brocoli ,no,gramo,19,75,4/1/2025
 13,buffalo ,no,gramo,29,100,4/1/2025
 14,cadera de res ,no,gramo,22,100,4/1/2025
