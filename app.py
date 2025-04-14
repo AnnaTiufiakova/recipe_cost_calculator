@@ -27,15 +27,17 @@ if not st.session_state["authenticated"]:
         else:
             st.error("Invalid username or password")
 
-# 👇 Main app only for logged-in users
+# Main app only for logged-in users
 if st.session_state["authenticated"]:
-
-    st.title("Standard Recipe Calculator 🍽️")
-
     # Logout button
-    if st.button("Logout"):
-        st.session_state["authenticated"] = False
-        st.rerun()
+    col1, col2, col3 = st.columns([6, 1, 1])
+    with col3:
+        if st.button("Logout"):
+            st.session_state["authenticated"] = False
+            st.rerun()
+
+    st.image("logo.png", width=600)
+    st.title("Standard Recipe Calculator 🍽️")
 
     @st.cache_data
     def load_data():
@@ -146,8 +148,8 @@ if st.session_state["authenticated"]:
         st.info("Please select a recipe to proceed.")
 
     # Display results
-    st.subheader("Ingredients & Cost Breakdown")
-    if "ingredients" in locals():  # Ensure ingredients exists before displaying
+    if selected_recipe != "-- Select recipe --" and selected_recipe != "":
+        st.subheader("Ingredients & Cost Breakdown")
         st.dataframe(
             ingredients[
                 [
