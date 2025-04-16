@@ -4,127 +4,6 @@ import hashlib
 from fpdf import FPDF
 
 
-# Function to generate PDF
-def generate_pdf(
-    selected_recipe,
-    ingredients,
-    total_cost,
-    error_margin_cost,
-    preparation_cost,
-    cost_per_gram,
-    cost_per_portion,
-    potential_price,
-    cost_percentage,
-    recipe_price,
-):
-
-    def calculate_column_widths(ingredients, headers):
-        column_widths = []
-        for header in headers:
-            # Get the max width between the header and the longest item in each column
-            max_width = max(
-                pdf.get_string_width(header),  # width of the header
-                max(
-                    ingredients[header].apply(lambda x: pdf.get_string_width(str(x)))
-                ),  # max width of the column data
-            )
-            # Adding some padding to the column width
-            column_widths.append(max_width + 10)  # 10 is the padding
-        return column_widths
-
-    pdf = FPDF(orientation="L")
-    pdf.add_page()
-    pdf.image("logo_for_pdf.png", x=10, y=8, w=50)
-    pdf.set_font("Arial", "B", 20)
-    pdf.cell(200, 10, txt=f"{selected_recipe.upper()}", ln=True, align="C")
-    pdf.ln(10)
-
-    # Table header
-    pdf.set_font("Arial", "B", 12)
-    headers = [
-        "name",
-        "initial_quantity",
-        "final_quantity",
-        "yield_pct",
-        "unit",
-        "price_per_unit",
-        "cost",
-    ]
-
-    # Call the function to calculate column widths
-    column_widths = calculate_column_widths(ingredients, headers)
-
-    # Set column width for each header based on calculated widths
-    for i, header in enumerate(headers):
-        pdf.cell(column_widths[i], 10, header, border=1)
-    pdf.ln()
-
-    # Table rows
-    pdf.set_font("Arial", "", 12)
-    for _, row in ingredients.iterrows():
-        pdf.cell(column_widths[0], 9, str(row["name"]), border=1)
-        pdf.cell(column_widths[1], 9, str(row["initial_quantity"]), border=1)
-        pdf.cell(column_widths[2], 9, str(row["final_quantity"]), border=1)
-        pdf.cell(column_widths[3], 9, str(row["yield_pct"]), border=1)
-        pdf.cell(column_widths[4], 9, str(row["unit"]), border=1)
-        pdf.cell(column_widths[5], 9, f"${row['price_per_unit']:.2f}", border=1)
-        pdf.cell(column_widths[6], 9, f"${row['cost']:.2f}", border=1)
-        pdf.ln()
-
-    # Summary section
-    pdf.ln(5)
-    pdf.set_font("Arial", "B", 12)
-    pdf.cell(80, 9, txt="Total Raw Material Cost:", ln=False)
-    pdf.set_font("Arial", "", 12)
-    pdf.cell(50, 9, txt=f"${total_cost:.2f}", ln=True)
-
-    pdf.set_font("Arial", "B", 12)
-    pdf.cell(80, 9, txt="Error Margin Cost:", ln=False)
-    pdf.set_font("Arial", "", 12)
-    pdf.cell(50, 9, txt=f"${error_margin_cost:.2f}", ln=True)
-
-    if preparation_cost != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Total Preparation Cost:", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"${preparation_cost:.2f}", ln=True)
-
-    if cost_per_gram != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Cost per Gram:", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"${cost_per_gram:.2f}", ln=True)
-
-    if cost_per_portion != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Cost per Portion:", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"${cost_per_portion:.2f}", ln=True)
-
-    if potential_price != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Potential Selling Price:", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"${potential_price:.2f}", ln=True)
-
-    if cost_percentage != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Cost Percentage (Target: 35%):", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"{cost_percentage:.1f}%", ln=True)
-
-    if recipe_price != 0:
-        pdf.set_font("Arial", "B", 12)
-        pdf.cell(80, 9, txt="Menu Price:", ln=False)
-        pdf.set_font("Arial", "", 12)
-        pdf.cell(50, 9, txt=f"${recipe_price:.2f}", ln=True)
-
-    # Save to file
-    pdf_output_path = f"{selected_recipe.replace(' ', '_').lower()}_recipe.pdf"
-    pdf.output(pdf_output_path)
-    return pdf_output_path
-
-
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
@@ -160,6 +39,134 @@ if st.session_state["authenticated"]:
 
     st.image("logo.png", width=600)
     st.title("Standard Recipe Calculator 🍽️")
+
+    # Function to generate PDF
+    def generate_pdf(
+        selected_recipe,
+        ingredients,
+        total_cost,
+        error_margin_cost,
+        preparation_cost,
+        cost_per_gram,
+        cost_per_portion,
+        potential_price,
+        cost_percentage,
+        recipe_price,
+        updated_at,
+    ):
+
+        def calculate_column_widths(ingredients, headers):
+            column_widths = []
+            for header in headers:
+                # Get the max width between the header and the longest item in each column
+                max_width = max(
+                    pdf.get_string_width(header),  # width of the header
+                    max(
+                        ingredients[header].apply(
+                            lambda x: pdf.get_string_width(str(x))
+                        )
+                    ),  # max width of the column data
+                )
+                # Adding some padding to the column width
+                column_widths.append(max_width + 10)  # 10 is the padding
+            return column_widths
+
+        pdf = FPDF(orientation="L")
+        pdf.add_page()
+        pdf.image("logo_for_pdf.png", x=10, y=8, w=50)
+        pdf.set_font("Arial", "B", 14)
+        pdf.cell(200, 8, txt="Red y Mar Pescaderia Restaurant", ln=True, align="C")
+        pdf.cell(200, 8, txt="Standard Recipe", ln=True, align="C")
+        pdf.set_font("Arial", "I", 14)
+        pdf.cell(200, 8, txt=f"{selected_recipe.upper()}", ln=True, align="C")
+        pdf.set_font("Arial", "B", 14)
+        pdf.cell(200, 8, txt=f"Last modified:{updated_at}", ln=False, align="C")
+        pdf.ln(10)
+
+        # Table header
+        pdf.set_font("Arial", "B", 12)
+        headers = [
+            "name",
+            "initial_quantity",
+            "final_quantity",
+            "yield_pct",
+            "unit",
+            "price_per_unit",
+            "cost",
+        ]
+
+        # Call the function to calculate column widths
+        column_widths = calculate_column_widths(ingredients, headers)
+
+        # Set column width for each header based on calculated widths
+        for i, header in enumerate(headers):
+            pdf.cell(column_widths[i], 10, header, border=1)
+        pdf.ln()
+
+        # Table rows
+        pdf.set_font("Arial", "", 12)
+        for _, row in ingredients.iterrows():
+            pdf.cell(column_widths[0], 9, str(row["name"]), border=1)
+            pdf.cell(column_widths[1], 9, str(row["initial_quantity"]), border=1)
+            pdf.cell(column_widths[2], 9, str(row["final_quantity"]), border=1)
+            pdf.cell(column_widths[3], 9, str(row["yield_pct"]), border=1)
+            pdf.cell(column_widths[4], 9, str(row["unit"]), border=1)
+            pdf.cell(column_widths[5], 9, f"${row['price_per_unit']:.2f}", border=1)
+            pdf.cell(column_widths[6], 9, f"${row['cost']:.2f}", border=1)
+            pdf.ln()
+
+        # Summary section
+        pdf.ln(5)
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(80, 9, txt="Total Raw Material Cost:", ln=False)
+        pdf.set_font("Arial", "", 12)
+        pdf.cell(50, 9, txt=f"${total_cost:.2f}", ln=True)
+
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(80, 9, txt="Error Margin Cost:", ln=False)
+        pdf.set_font("Arial", "", 12)
+        pdf.cell(50, 9, txt=f"${error_margin_cost:.2f}", ln=True)
+
+        if preparation_cost != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Total Preparation Cost:", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"${preparation_cost:.2f}", ln=True)
+
+        if cost_per_gram != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Cost per Gram:", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"${cost_per_gram:.2f}", ln=True)
+
+        if cost_per_portion != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Cost per Portion:", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"${cost_per_portion:.2f}", ln=True)
+
+        if potential_price != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Potential Selling Price:", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"${potential_price:.2f}", ln=True)
+
+        if cost_percentage != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Cost Percentage (Target: 35%):", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"{cost_percentage:.1f}%", ln=True)
+
+        if recipe_price != 0:
+            pdf.set_font("Arial", "B", 12)
+            pdf.cell(80, 9, txt="Menu Price:", ln=False)
+            pdf.set_font("Arial", "", 12)
+            pdf.cell(50, 9, txt=f"${recipe_price:.2f}", ln=True)
+
+        # Save to file
+        pdf_output_path = f"{selected_recipe.replace(' ', '_').lower()}_recipe.pdf"
+        pdf.output(pdf_output_path)
+        return pdf_output_path
 
     @st.cache_data
     def load_data():
@@ -221,8 +228,8 @@ if st.session_state["authenticated"]:
             ingredients["price_per_unit"] = ingredients["item_id"].map(latest_prices)
 
             # Calculate final quantity
-            ingredients["final_quantity"] = (
-                ingredients["initial_quantity"] * ingredients["yield_pct"] / 100
+            ingredients["final_quantity"] = round(
+                ingredients["initial_quantity"] * ingredients["yield_pct"] / 100, 2
             )
 
             # Calculate total raw material cost
@@ -319,6 +326,9 @@ if st.session_state["authenticated"]:
 
     # Add the "Generate PDF" button
     if selected_recipe != "-- Select recipe --" and selected_recipe != "":
+        updated_at = recipe_row["updated_at"].iloc[0]
+        updated_at = pd.to_datetime(updated_at)
+        updated_at = updated_at.strftime("%Y-%m-%d")
         # Always show the "Generate PDF" button
         if st.button("Generate PDF"):
             pdf_output_path = generate_pdf(
@@ -332,6 +342,7 @@ if st.session_state["authenticated"]:
                 potential_price,
                 cost_percentage,
                 recipe_price,
+                updated_at,
             )
 
             # Make the file downloadable
