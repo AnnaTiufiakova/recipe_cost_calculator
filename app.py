@@ -1,7 +1,7 @@
 import streamlit as st
 from auth import login, logout
 from utils.session import init_session
-from pages import home, recipes, ingredients, new_ingredient, new_recipe
+from pages import home, recipes, ingredients, new_recipe
 
 
 init_session()
@@ -20,7 +20,5 @@ else:
         recipes.render()
     elif st.session_state.page == "ingredients":
         ingredients.render()
-    elif st.session_state.page == "new_ingredient":
-        new_ingredient.render()
     elif st.session_state.page == "new_recipe":
         new_recipe.render()

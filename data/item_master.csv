@@ -1,82 +1,83 @@
 item_id,name,is_subrecipe,unit,price_per_unit,yield_pct,updated_at
-1,aceite ,no,ml,9,100,4/1/2025
-2,adobo ,yes,gramo,8.62,100,4/1/2025
-3,agua ,no,ml,0,100,4/1/2025
-4,aguacate papelillo,no,gramo,14,75,4/1/2025
-5,ajo ,no,gramo,20,95,4/1/2025
-6,ajo parmesano (salsa),yes,gramo,21.62,100,4/1/2025
-7,alas,no,gramo,8,100,4/1/2025
-8,alas x 1,yes,unidad,5303.44,100,4/1/2025
-9,azucar ,no,gramo,5,100,4/1/2025
-10,bbq,no,gramo,21,100,4/1/2025
-11,beef patty ,yes,gramo,16.38,100,4/1/2025
-12,brocoli ,no,gramo,19,75,4/1/2025
-13,buffalo ,no,gramo,29,100,4/1/2025
-14,cadera de res ,no,gramo,22,100,4/1/2025
-15,carne molida,no,gramo,18,100,4/1/2025
-16,cebolla cabezona blanca,no,gramo,4,70,4/1/2025
-17,cebolla cabezona morada,no,gramo,5,70,4/1/2025
-18,chili paste ,no,gramo,37,100,4/1/2025
-19,chili flakes ,no,gramo,64,100,4/1/2025
-20,chorizo santarrosano,no,gramo,43,100,4/1/2025
-21,cebolla cabezona larga,no,gramo,5.6,70,4/1/2025
-22,cilantro ,no,gramo,26,90,4/1/2025
-23,coliflor,no,gramo,19,75,4/1/2025
-24,crema de leche ,no,gramo,11,100,4/1/2025
-25,ensalada de la casa,yes,gramo,18.67,100,4/1/2025
-26,finas hierbas,no,gramo,78,100,4/1/2025
-27,guacamole ,yes,gramo,21.39,100,4/1/2025
-28,habanero ,no,gramo,14,98,4/1/2025
-29,huevo ,no,unidad,563,100,4/1/2025
-30,huevo mix,yes,gramo,24.77,100,4/1/2025
-31,jalapeño,no,gramo,14,98,4/1/2025
-32,jengibre,no,gramo,24,100,4/1/2025
-33,ketchup,no,gramo,24,100,4/1/2025
-34,laurel_tomillo,no,gramo,6.7,100,4/1/2025
-35,leche ,no,ml,4,100,4/1/2025
-36,lechuga batavia,no,gramo,12,85,4/1/2025
-37,lechuga crespa morada,no,gramo,12,85,4/1/2025
-38,lechuga crespa verde ,no,gramo,12,85,4/1/2025
-39,lechuga romana ,no,gramo,22,85,4/1/2025
-40,limon,no,gramo,6,42.4,4/1/2025
-41,lomo de cerdo ,no,gramo,22,80,4/1/2025
-42,maggie ,no,gramo,33,100,4/1/2025
-43,maiz,no,gramo,14,100,4/1/2025
-44,mango madness,yes,gramo,9.61,100,4/1/2025
-45,mantequilla,no,gramo,16,100,4/1/2025
-46,mapple spice,yes,gramo,11.73,100,4/1/2025
-47,mapple syrup ,no,gramo,10,100,4/1/2025
-48,mayonesa,no,gramo,27,100,4/1/2025
-49,mostaza ,no,gramo,12,100,4/1/2025
-50,nachos ,no,gramo,27,100,4/1/2025
-51,pan brioche ,no,unidad,1100,100,4/1/2025
-52,pan sandwich  ,no,unidad,1600,100,4/1/2025
-53,panko ,no,gramo,25,100,4/1/2025
-54,papa francesa ,no,gramo,11,100,4/1/2025
-55,paprika ,no,gramo,40,100,4/1/2025
-56,pasta de ajo ,yes,gramo,18.68,100,4/1/2025
-57,pechuga,no,gramo,11.1,50,4/1/2025
-58,perejil liso,no,gramo,6,90,4/1/2025
-59,pico de gallo ,yes,gramo,7.5,100,4/1/2025
-60,pimenton,no,gramo,10,80,4/1/2025
-61,pulpa de mango ,no,gramo,14,100,4/1/2025
-62,queso crema,no,gramo,27,100,4/1/2025
-63,queso mozzarella ,no,gramo,23.73,100,4/1/2025
-64,queso para asar,no,gramo,43,100,4/1/2025
-65,queso parmesano ,no,gramo,78,100,4/1/2025
-66,sal ,no,gramo,3,100,4/1/2025
-67,salsa coreana ,yes,gramo,15.24,100,4/1/2025
-68,salsa soya,no,gramo,8,100,4/1/2025
-69,salsa teriyaky,no,gramo,14,100,4/1/2025
-70,salsa tomate,no,gramo,15,100,4/1/2025
-71,siracha,no,gramo,36,100,4/1/2025
-72,sweet chili ,no,gramo,28,100,4/1/2025
-73,tocineta,no,gramo,125,100,4/1/2025
-74,tomate cherry ,no,gramo,14,95,4/1/2025
-75,tomate chonto,no,gramo,7,90,4/1/2025
-76,vinagre,no,ml,3,100,4/1/2025
-77,vinagreta ,yes,gramo,12.65,100,4/1/2025
-78,yucas ,no,gramo,4,90,4/1/2025
-79,yuquitas,no,gramo,9,100,4/1/2025
-80,zucchini amarillo,no,gramo,4,95,4/1/2025
-81,zucchini verde ,no,gramo,4,95,4/1/2025
+1,aceite ,no,ml,9.0,100.0,4/1/2025
+2,adobo ,yes,gramo,8.62,100.0,4/1/2025
+3,agua ,no,ml,0.0,100.0,4/1/2025
+4,aguacate papelillo,no,gramo,14.0,75.0,4/1/2025
+5,ajo ,no,gramo,20.0,95.0,4/1/2025
+6,ajo parmesano (salsa),yes,gramo,21.62,100.0,4/1/2025
+7,alas,no,gramo,8.0,100.0,4/1/2025
+8,alas x 1,yes,unidad,5303.44,100.0,4/1/2025
+9,azucar ,no,gramo,5.0,100.0,4/1/2025
+10,bbq,no,gramo,21.0,100.0,4/1/2025
+11,beef patty ,yes,gramo,16.38,100.0,4/1/2025
+12,brocoli ,no,gramo,19.0,75.0,4/1/2025
+13,buffalo ,no,gramo,29.0,100.0,4/1/2025
+14,cadera de res ,no,gramo,22.0,100.0,4/1/2025
+15,carne molida,no,gramo,18.0,100.0,4/1/2025
+16,cebolla cabezona blanca,no,gramo,4.0,70.0,4/1/2025
+17,cebolla cabezona morada,no,gramo,5.0,70.0,4/1/2025
+18,chili paste ,no,gramo,37.0,100.0,4/1/2025
+19,chili flakes ,no,gramo,64.0,100.0,4/1/2025
+20,chorizo santarrosano,no,gramo,43.0,100.0,4/1/2025
+21,cebolla cabezona larga,no,gramo,5.6,70.0,4/1/2025
+22,cilantro ,no,gramo,26.0,90.0,4/1/2025
+23,coliflor,no,gramo,19.0,75.0,4/1/2025
+24,crema de leche ,no,gramo,11.0,100.0,4/1/2025
+25,ensalada de la casa,yes,gramo,18.67,100.0,4/1/2025
+26,finas hierbas,no,gramo,78.0,100.0,4/1/2025
+27,guacamole ,yes,gramo,21.39,100.0,4/1/2025
+28,habanero ,no,gramo,14.0,98.0,4/1/2025
+29,huevo ,no,unidad,563.0,100.0,4/1/2025
+30,huevo mix,yes,gramo,24.77,100.0,4/1/2025
+31,jalapeño,no,gramo,14.0,98.0,4/1/2025
+32,jengibre,no,gramo,24.0,100.0,4/1/2025
+33,ketchup,no,gramo,24.0,100.0,4/1/2025
+34,laurel_tomillo,no,gramo,6.7,100.0,4/1/2025
+35,leche ,no,ml,4.0,100.0,4/1/2025
+36,lechuga batavia,no,gramo,12.0,85.0,4/1/2025
+37,lechuga crespa morada,no,gramo,12.0,85.0,4/1/2025
+38,lechuga crespa verde ,no,gramo,12.0,85.0,4/1/2025
+39,lechuga romana ,no,gramo,22.0,85.0,4/1/2025
+40,limon,no,gramo,6.0,42.4,4/1/2025
+41,lomo de cerdo ,no,gramo,22.0,80.0,4/1/2025
+42,maggie ,no,gramo,33.0,100.0,4/1/2025
+43,maiz,no,gramo,14.0,100.0,4/1/2025
+44,mango madness,yes,gramo,9.61,100.0,4/1/2025
+45,mantequilla,no,gramo,16.0,100.0,4/1/2025
+46,mapple spice,yes,gramo,11.73,100.0,4/1/2025
+47,mapple syrup ,no,gramo,10.0,100.0,4/1/2025
+48,mayonesa,no,gramo,27.0,100.0,4/1/2025
+49,mostaza ,no,gramo,12.0,100.0,4/1/2025
+50,nachos ,no,gramo,27.0,100.0,4/1/2025
+51,pan brioche ,no,unidad,1100.0,100.0,4/1/2025
+52,pan sandwich  ,no,unidad,1600.0,100.0,4/1/2025
+53,panko ,no,gramo,25.0,100.0,4/1/2025
+54,papa francesa ,no,gramo,11.0,100.0,4/1/2025
+55,paprika ,no,gramo,40.0,100.0,4/1/2025
+56,pasta de ajo ,yes,gramo,18.68,100.0,4/1/2025
+57,pechuga,no,gramo,11.1,50.0,4/1/2025
+58,perejil liso,no,gramo,6.0,90.0,4/1/2025
+59,pico de gallo ,yes,gramo,7.5,100.0,4/1/2025
+60,pimenton,no,gramo,10.0,80.0,4/1/2025
+61,pulpa de mango ,no,gramo,14.0,100.0,4/1/2025
+62,queso crema,no,gramo,27.0,100.0,4/1/2025
+63,queso mozzarella ,no,gramo,23.73,100.0,4/1/2025
+64,queso para asar,no,gramo,43.0,100.0,4/1/2025
+65,queso parmesano ,no,gramo,78.0,100.0,4/1/2025
+66,sal ,no,gramo,3.0,100.0,4/1/2025
+67,salsa coreana ,yes,gramo,15.24,100.0,4/1/2025
+68,salsa soya,no,gramo,8.0,100.0,4/1/2025
+69,salsa teriyaky,no,gramo,14.0,100.0,4/1/2025
+70,salsa tomate,no,gramo,15.0,100.0,4/1/2025
+71,siracha,no,gramo,36.0,100.0,4/1/2025
+72,sweet chili ,no,gramo,28.0,100.0,4/1/2025
+73,tocineta,no,gramo,125.0,100.0,4/1/2025
+74,tomate cherry ,no,gramo,14.0,95.0,4/1/2025
+75,tomate chonto,no,gramo,7.0,90.0,4/1/2025
+76,vinagre,no,ml,3.0,100.0,4/1/2025
+77,vinagreta ,yes,gramo,12.65,100.0,4/1/2025
+78,yucas ,no,gramo,4.0,90.0,4/1/2025
+79,yuquitas,no,gramo,9.0,100.0,4/1/2025
+80,zucchini amarillo,no,gramo,4.0,95.0,4/1/2025
+81,zucchini verde ,no,gramo,4.0,95.0,4/1/2025
+82,mora,no,gramo,7.0,93.0,2025-05-13

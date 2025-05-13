@@ -12,9 +12,6 @@ def render():
     if st.button("🔍 See Ingredients"):
         go_to("ingredients")
         st.rerun()
-    if st.button("🧂 Add New Ingredient"):
-        go_to("new_ingredient")
-        st.rerun()
     if st.button("➕ Add New Recipe"):
         go_to("new_recipe")
         st.rerun()
