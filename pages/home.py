@@ -15,3 +15,6 @@ def render():
     if st.button("➕ Add New Recipe"):
         go_to("new_recipe")
         st.rerun()
+    if st.button("⚖️ Quick Cost Estimator"):
+        go_to("quick_cost_estimator")
+        st.rerun()
